@@ -1,261 +1,455 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+}
+html, body {
+    height: 100%; /* Ensure both the html and body cover the full height of the viewport */
+    margin: 0;
+    padding: 0;
+}
+.container {
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: transparent;
+}
+h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    color: black;
+    margin-bottom: 20px;
+}
+
+/* Subheading styling */
+h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 20px;
 }
 
 body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background: linear-gradient(180deg, #c2ffc8 0%, #b0ffa7 30%, #90ff64 70%, #00ff00 100%);
+    background-size: cover; /* Ensures the background covers the entire body */
+    background-position: center;
+    background-attachment: fixed; /* Fixes the background in place */
+    min-height: 100vh; /* Ensures the body has a minimum height of the full viewport */
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    border-bottom: 1px solid hsla(0, 0%, 0%, 0.2);
+    z-index: 10;
+}
+.header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.header .logo img {
+    vertical-align: middle;
+    width: 10vh;
+    height: 10vh;
+
+}
+.header .menu .head {
+    display: none;
+}
+.header .menu ul{
+    list-style: none;
+}
+.header .menu > ul > li {
+    display: inline-block;
+}
+.header .menu > ul > li:not(:last-child){
+    margin-right: 40px;
+}
+.header .menu .dropdown {
+    position: relative;
+}
+.header .menu a {
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 16px;
+    color:black;
+    line-height: 1.5;
+    display: block;
+}
+.header .menu > ul > li > a {
+    padding: 24px 0;
+}
+.header .menu > ul > .dropdown > a {
+    padding-right: 15px;
+}
+.header .menu i{
+    font-size: 10px;
+    pointer-events: none;
+    user-select: none;
+    position: absolute;
+    color:hsl(0, 0%, 100%);
+    top: calc(50% - 5px);
+}
+.header .menu > ul > li > i {
+    right: 0;
+}
+.header .menu .sub-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 230px;
+    padding: 15px 0;
+    background: rgba(154, 150, 150, 0.3);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(154, 150, 150, 0.13);
+    z-index: 1;
+    transform-origin: top;
+    transform: scaleY(0);
+    visibility: hidden;
+    opacity: 0;
+}
+.header .menu .sub-menu-right{
+    left: 100%;
+    top: 0;
+}
+.header .menu li:hover > .sub-menu{
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+    transition: all 0.5s ease;
+}
+.header .menu .sub-menu a {
+    padding: 6px 24px;
+}
+.header .menu .sub-menu .dropdown > a {
+    padding-right: 34px;
+}
+.header .menu .sub-menu span{
+    background-image: linear-gradient(hsl(0,0%,100%), hsl(0,0%,100%));
+    background-size: 0 1px;
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    transition: background-size 0.5s ease;
+}
+.header .menu .sub-menu li:hover > a > span{
+    background-size: 100% 1px;
+}
+.header .menu .sub-menu i{
+    transform: rotate(-90deg);
+    right: 24px;
+
+}
+.header-right{
+    display: flex;
+}
+.header-right > *{
+    margin-left: 25px;
+} 
+.header-right .icon-btn{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: hsl(0, 0%, 100%);
+    font-size: 16px;
+}
+.header-right .open-menu-btn{
+    display: none;
+
+}
+@media(max-width:991px){
+    .header{
+        padding: 12px 0;
+    }
+    .header .menu{
+        position:fixed;
+        right: 0;
+        top: 0;
+        width: 320px;
+        height: 100%;
+        background-color: hsl(0, 1%, 76%);
+        padding: 15px 30px 30px;
+        overflow-y: auto;
+        z-index: 1;
+        transform: translateX(100%);
+    }
+    .header .menu.open{
+        transform: none;
+
+    }
+    .header .menu .head{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 25px;
+    }
+    .header .menu .close-menu-btn{
+        height: 35px;
+        width: 35px;
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        cursor: pointer;
+        border: none;
+    }
+    .header .menu .close-menu-btn::before,
+    .header .menu .close-menu-btn::after{
+        content: '';
+        position: absolute;
+        width: 80%;
+        height: 2px;
+        background-color: hsl(0, 0%, 100%);
+    }
+    .header .menu .close-menu-btn::before{
+        transform: rotate(45deg);
+    }
+    .header .menu .close-menu-btn::after{
+        transform: rotate(-45deg);
+    }
+    .header .menu > ul > li{
+        display: block;
+    }
+    .header .menu > ul > li:not(:last-child){
+        margin-right: 0;
+    }
+    .header .menu li{
+        border-bottom: 1px solid hsla(0, 0%, 100%, 0.348);
+    }
+    .header .menu li:first-child{
+        border-top: 1px solid hsla(0, 0%, 100%, 0.33);
+    }
+    .header .menu > ul > li > a{
+        padding: 12px 0;
+    }
+    .header .menu > ul > .dropdown > a {
+        padding-right: 34px;
+    }
+    .header .menu i{
+        height: 34px;
+        width: 34px;
+        border: 1px solid hsla(0, 0%, 100%, 0.25);
+        display: inline-flex;
+        justify-content: center;
+        pointer-events: auto;
+        cursor: pointer;
+        top: 7px;
+    }
+    .header .menu .dropdown.active > i{
+        background-color: hsla(0, 0%, 100%, 0.25);
+        transform: rotate(180deg);
+    }
+    .header .menu .sub-menu{
+        position: static;
+        opacity: 1;
+        transform: none;
+        visibility: visible;
+        padding: 0;
+        transition: none;
+        box-shadow: none;
+        width: 100%;
+        display: none;
+    }
+    .header .menu .dropdown.active > .sub-menu{
+        display: block;
+    }
+    .header .menu .sub-menu li:last-child {
+        border: none;
+    }
+    .header .menu .sub-menu a {
+        padding: 12px 0 12px 15px;
+    }
+    .header .menu .sub-menu .sub-menu a {
+        padding-left: 30px;
+    }
+     .header .menu .sub-menu span{
+        background-image: none;
+     }
+     .header .menu .sub-menu i {
+        transform: none;
+        right: 0;
+     }
+     .header-right .open-menu-btn{
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        width: 44px;
+        cursor: pointer;
+        position: relative;
+        background-color: transparent;
+        border: none;
+     }
+     .header-right .open-menu-btn .line{
+        height: 2px;
+        width: 30px;
+        background-color: hsl(0, 0%, 100%);
+        position: absolute;
+     }
+     .header .open-menu-btn .line-1{
+        transform: translateY(-8px);
+     }
+     .header .open-menu-btn .line-3{
+        transform: translateY(8px);
+     }
+}
+.hero {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 100px 5px;
+}
+.autoShow{
+    animation: autoShowAnimation both;
+    animation-timeline: view(70% 5%);
+}
+@keyframes autoShowAnimation{
+    from {
+        opacity: 0;
+        transform: translateY(200px) scale(0.3);
+    }to{
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+}
+.autoBlur{
+    animation: autoBlurAnimation linear both;
+    animation-timeline: view();
+}
+@keyframes autoBlurAnimation{
+    0%{
+        filter: blur(40px);
+    }45%, 55%{
+        filter: blur(0);
+    } 100% {
+        filter: blur(40px);
+    }
+}
+.glassEffect{
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+}
+.hero .video-intro {
+    width: 100%;
+    height: 500px; /* Ensures the container takes up the full height */
+    position: relative; /* Important for proper scaling */
+    overflow: hidden; /* Ensure the video doesn’t overflow the container */
+}
+
+.hero .video-intro video {
+    width: 100%;
+    height: 500px;
+    object-fit: cover; /* Ensures the video covers the entire container without distortion */
+    position: absolute; /* Ensures the video fills the entire container */
+    top: 0;
+    left: 0;
+}
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #00ff00; /* Neon green on hover */
+    color: black;
+}
+.hero .informations{
     display: flex;
     width: 100%;
+    height: 700px;
     flex-direction: column;
-    min-height: 100vh;
-    background: linear-gradient(135deg, #f0f0f0, #d9d9d9);
-    padding-left: 20px;
-    padding-right: 20px;
+    justify-content: center;
+    align-items: center;
 }
 
-header {
-    position: relative;
-    z-index: 10; /* Ensure header is above the dropdown content */
+.hero .content-info {
+    display: flex;
+    justify-content: space-between; /* Ensure left and right containers are side by side */
+    width: 100%;
+    height: 400px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.hero .container-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically centers the items */
+    align-items: center; /* Horizontally centers the items */
+    width: 50%;
+    padding: 20px;
+    text-align: center; /* Centers the text content */
 }
 
-.navbar {
+.hero .container-right {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow: hidden; /* Ensures no overflow */
+}
+
+.hero .container-right img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain; /* Ensures the image fits within the container without distortion */
+    display: block;
+}
+/* Styles for the new blur-container */
+.blur-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    background: linear-gradient(60deg, #ffd900c4, #ffd700, #ffffff, #ffffff, #c0c0c0, #c0c0c0, #c0c0c0);
-    background-size: 150% 150%; /* Ensures the gradient spans a large area for smooth animation */
-    color: white;
-    padding: 10px 20px;
-    z-index: 20; /* Higher z-index to stay above the dropdown content */
-    animation: gradient-animation 5s linear infinite; /* Apply the gradient animation */
+    padding: 30px;
+    margin: 20px;
+    backdrop-filter: blur(20px); /* Adds the blur effect */
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    background-color: rgba(255, 255, 255, 0.1); /* Light translucent background */
+    overflow: hidden;
 }
 
-@keyframes gradient-animation {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+/* Adjust the container-left and container-right within the blur-container */
+.blur-container .container-left,
+.blur-container .container-right {
+    width: 48%; /* Adjusts to fit inside the blur-container */
 }
 
-.navbar .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: black; /* Ensure the logo color remains visible */
-}
-
-.navbar .menu {
+/* Ensure the contents are centered inside the container-left */
+.blur-container .container-left {
     display: flex;
-    align-items: center;
-    position: relative; /* Ensure menu items are above dropdown content */
-    z-index: 20; /* Same z-index as navbar */
-}
-
-.navbar .menu a {
-    color: black; /* Ensure the text color is visible on gradient background */
-    text-decoration: none;
-    margin: 0 10px;
-    padding: 5px 10px;
-    border-radius: 5px;
-    position: relative;
-    transition: color 0.3s ease-in-out; /* Smooth transition for text color change */
-}
-
-.navbar .menu a:hover {
-    background-color: #555;
-    color: white; /* Change text color on hover */
-}
-
-.navbar .menu .dropdown {
-    position: relative;
-}
-
-.navbar .menu .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #c0c0c0;
-    min-width: 160px;
-    top: 100%;
-    left: 0;
-    z-index: 10; /* Lower z-index to appear behind the navbar */
     flex-direction: column;
-    padding-top: 20px;
-}
-
-.navbar .menu .dropdown-content a {
-    color: black;
-    padding: 10px;
-    text-align: left;
-}
-
-.navbar .menu .dropdown-content a:hover {
-    background-color: #555;
-    color: white;
-}
-
-.navbar .menu .dropdown:hover .dropdown-content {
-    display: flex;
-}
-
-.toggle-button {
-    display: none;
-    font-size: 30px;
-    cursor: pointer;
-}
-
-.video-container {
-    margin-top: 3%;
-    background-color: #ffffff;
-    height: 400px;
-    width: 100%;
-    display: flex;
-    align-items: center;
     justify-content: center;
-    overflow: hidden; /* Ensure the video fits within the container */
-}
-
-.video-container video {
-    width: 100%;
-    height: auto;
-    object-fit: cover; /* Ensure the video covers the entire container */
-    pointer-events: none; /* Prevent the video controls from being shown on hover */
-}
-
-.description-container {
-    background-color: #adb5bd;
-    padding: 2rem;
-    text-align: center;
-    color: #fff;
-}
-
-.scroll-gallery-container {
-    background: linear-gradient(135deg, #f0f0f0, #d9d9d9);
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
     align-items: center;
-}
-
-.scroll-gallery-container .gallery {
-    display: flex;
-    gap: 1rem;
-}
-
-.scroll-gallery-container .gallery-item {
-    flex-direction: column;
-    background-color: #fff;
-    padding: 1rem;
-    width: 400px;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    overflow: hidden; /* Ensure images fit within the item without overflow */
-}
-
-.scroll-gallery-container .gallery-item img {
-    width: 100%;
-    height: auto;
-    object-fit: cover; /* Ensure the image covers the entire gallery item */
-}
-
-.scroll-gallery-container .gallery-buttons {
-    margin-top: 1rem;
-}
-
-.scroll-gallery-container .gallery-button {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 0.5rem 1rem;
-    margin: 0 0.5rem;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-.footer-container {
-    background-color: #495057;
-    padding: 1rem;
     text-align: center;
-    color: #fff;
 }
 
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .navbar .menu {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        text-align: left;
-        background-color: silver;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        z-index: 15; /* Ensure it appears above dropdown-content */
-    }
-
-    .navbar .menu a {
-        margin: 10px 0;
-        padding: 10px;
-    }
-
-    .navbar .menu.show {
-        display: flex;
-    }
-
-    .toggle-button {
-        display: block;
-        align-self: flex-end;
-    }
-
-    .navbar .menu .dropdown-content {
-        position: static;
-        display: none;
-        width: 100%; /* Full width in mobile view */
-    }
-
-    .navbar .menu .dropdown-content.show {
-        display: flex;
-    }
-
-    .video-container {
-        margin-top: -36%;
-        margin-bottom: -38%;
-        background-color: #ffffff;
-        height: 400px;
-    }
-    .scroll-gallery-container .gallery-item {
-        width: 250px;
-        height: auto;
-    }
-}
-
-@media (max-width: 480px) {
-    .navbar .logo {
-        font-size: 20px;
-    }
-
-    .navbar .menu a {
-        padding: 5px 0;
-    }
-}
-
-main {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+/* Ensure the image fits well in the container-right */
+.blur-container .container-right img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
 }

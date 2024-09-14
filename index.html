@@ -3,72 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xelex - Immigration and Relocation Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <title>Xelex</title>
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">Xelex</div>
-            <div class="menu" id="menu">
-                <a href="#">Home</a>
-                <div class="dropdown">
-                    <a href="#">Immigration</a>
-                    <div class="dropdown-content" id="immigration-dropdown">
-                        <a href="#">Compliance Test</a>
-                        <a href="#">Pricing Model</a>
-                        <a href="#">Book a Swiss Permit Check</a>
-                    </div>
-                </div>
-                <a href="#">Legal Advice</a>
-                <a href="#">Settlement</a>
-                <div class="dropdown">
-                    <a href="#">Company</a>
-                    <div class="dropdown-content" id="company-dropdown">
-                        <a href="#">Owner</a>
-                        <a href="#">References</a>
-                        <a href="#">Jobs</a>
-                    </div>
-                </div>
-                <a href="#">Contact</a>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Xelex</h1>
             </div>
-            <div class="toggle-button" id="toggle-button">
-                &#9776;
+            <div class="menu">
+                <div class="head">
+                    <div class="logo"><img src="assets/logo/Xelexnobg.png" alt="logo"></div>
+                    <button type="button" class="close-menu-btn"></button>
+                </div>
+                <ul>
+                    <li class="dropdown">
+                        <a href="#">Immigration</a>
+                        <i class="fa-solid fa-chevron-down"></i>
+                        <ul class="sub-menu">
+                            <li><a href="#"><span>Long term assignments</span></a></li>
+                            <li><a href="#"><span>Short term assignments</span></a></li>
+                            <li><a href="#"><span>Business Visa</span></a></li>
+                            <li><a href="#"><span>Local Employment of Foreign National</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">International Employment</a>
+                        <i class="fa-solid fa-chevron-down"></i>
+                        <ul class="sub-menu">
+                            <li><a href="#"><span>International Employment Contracts</span></a></li>
+                            <li><a href="#"><span>Expat Policies</span></a></li>
+                            <li><a href="#"><span>International Social Security</span></a></li>
+                            <li><a href="#"><span>Posted Workers Notification</span></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Set up of a company</a></li>
+                    <li><a href="#">Tax</a></li>
+                    <li><a href="#">LGBTQIA+ Policies</a></li>
+                    <li><a href="#">AI and GDPR</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
             </div>
-        </nav>
+            <div class="header-right">
+                <button type="button" class="search-btn icon-btn"><i class="fa-solid fa-search"></i></button>
+                <button type="button" class="open-menu-btn">
+                    <span class="line line-1"></span>
+                    <span class="line line-2"></span>
+                    <span class="line line-3"></span>
+                </button>
+            </div>
+        </div>
     </header>
-    <main>
-        <section class="video-container">
-            <video autoplay muted loop>
-                <source src="assets/videos/swiss.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+    <section class="hero">
+        <section class="video-intro">
+            <video autoplay="true" loop>
+                <!-- The ‘loop’ attribute just makes the video play repeatedly-->
+                <source src="/assets/videos/IMG_6575 2.MOV" type="video/mp4" />
+              </video>
         </section>
-        <section class="description-container">
-            <!-- Description content -->
-             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, earum unde. Exercitationem nihil, quia, culpa cum similique error quidem a repellat iusto dolores maxime quis. Aspernatur aliquid rerum exercitationem sapiente fuga officiis suscipit eligendi neque? Ipsa temporibus ad esse assumenda consequatur repellat id vel magni. Pariatur, unde? Harum, iste debitis.</p>
+        <section class="informations autoShow">
+            <h1>Discover Xelex</h1>
+            <h2>Your Partner in Mobility Solutions</h2>
         </section>
-        <section class="scroll-gallery-container">
-            <div class="gallery">
-                <div class="gallery-item">
-                    <img src="" alt="Gallery Image" id="gallery-image">
-                    <p id="gallery-text"></p>
-                </div>
-            </div>
-            <div class="gallery-buttons">
-                <button class="gallery-button" id="prev-button">⬅</button>
-                <button class="gallery-button" id="next-button">➡</button>
-            </div>
+        <h1 class="autoShow"><u>Our Services</u></h1>
+        <section class="content-info">
+            <section class="blur-container autoShow autoBlur">
+                <section class="container-left"> <h1>We are specialized in providing support for Global Mobility</h1> <button type="button">Explore</button></section>
+                <section class="container-right "><img src="/assets/images/people.png" alt="image"></section>
+            </section>
+            <section class="blur-container autoShow">
+                <section class="container-left"><h1>International Employment</h1><button type="button">Explore</button></section>
+                <section class="container-right"><img src="/assets/images/InternationalEmployment.jpg" alt="image"></section>
+            </section>
+            <section class="blur-container autoShow autoBlur">
+                <section class="container-left"><h1>Corporate Immigration</h1><button type="button">Explore</button></section>
+                <section class="container-right "><img src="/assets/images/corporatemigration.jpg" alt="image"></section>
+            </section>
+            <section class="blur-container autoShow">
+                <section class="container-left"><h1>High Net Worth Individuals</h1><button type="button">Explore</button></section>
+                <section class="container-right"><img src="/assets/images/HighNetWorthIndividuals.jpg" alt="image"></section>
+            </section>
+            <section class="blur-container autoShow autoBlur">
+                <section class="container-left"><h1>AI and GDPR Legislation</h1><button type="button">Explore</button></section>
+                <section class="container-right "><img src="/assets/images/AIandGDPRLegislation.jpg" alt="image"></section>
+            </section>
+            <section class="blur-container autoShow">
+                <section class="container-left "><h1>LGBTQIA+ Policies</h1><button type="button">Explore</button></section>
+                <section class="container-right "><img src="/assets/images/LGBTQIA+Policies.png" alt="image"></section>
+            </section>
         </section>
-        <section class="description-container">
-            <h1>TITOLO</h1>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus odit maxime, odio quo nam eveniet maiores minima nihil voluptatum debitis commodi dolor consequuntur ad officia accusamus deserunt iusto rem beatae aperiam quidem ab dolorem alias blanditiis suscipit. Blanditiis, eligendi numquam. Asperiores harum cumque illum pariatur eius incidunt est expedita deserunt accusantium accusamus sit veniam, inventore nobis optio blanditiis. Eos assumenda voluptate vel modi. Quos ut itaque corrupti omnis tempora molestiae. Voluptatem, ab cum impedit maxime unde in eius possimus quam libero recusandae iste repudiandae explicabo aperiam, sunt quo ullam dolores!</p>
-            <!-- Additional description content -->
-        </section>
-    </main>
-    <footer class="footer-container">
-        <!-- Footer content -->
-    </footer>
-    <script src="js/script.js"></script>
+    </section>
+    
+<script src="js/script.js"></script>
 </body>
 </html>
