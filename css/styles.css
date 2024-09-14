@@ -34,7 +34,7 @@ body {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
-    background: linear-gradient(180deg, #c2ffc8 0%, #b0ffa7 30%, #90ff64 70%, #00ff00 100%);
+    background: linear-gradient(180deg, #ffffff 0%, #81daec 30%, #48f164 70%, #f6d948 100%);
     background-size: cover; /* Ensures the background covers the entire body */
     background-position: center;
     background-attachment: fixed; /* Fixes the background in place */
@@ -321,10 +321,10 @@ body {
 @keyframes autoShowAnimation{
     from {
         opacity: 0;
-        transform: translateY(200px) scale(0.3);
+        -webkit-transform: translateY(200px) scale(0.3);
     }to{
         opacity: 1;
-        transform: translateY(0px) scale(1);
+        -webkit-transform: translateY(0px) scale(1);
     }
 }
 .autoBlur{
@@ -333,11 +333,11 @@ body {
 }
 @keyframes autoBlurAnimation{
     0%{
-        filter: blur(40px);
+        -webkit-filter: blur(40px);
     }45%, 55%{
-        filter: blur(0);
+        -webkit-filter: blur(0);
     } 100% {
-        filter: blur(40px);
+        -webkit-filter: blur(40px);
     }
 }
 .glassEffect{
