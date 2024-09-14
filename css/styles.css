@@ -34,7 +34,7 @@ body {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
-    background: linear-gradient(180deg, #ffffff 0%, #81daec 30%, #48f164 70%, #f6d948 100%);
+    background: linear-gradient(180deg, #a09d9d 0%, #fdfdfd 30%, #88b6f3fb 70%, #f0ce27 100%);
     background-size: cover; /* Ensures the background covers the entire body */
     background-position: center;
     background-attachment: fixed; /* Fixes the background in place */
@@ -442,16 +442,16 @@ button:hover {
 /* Keyframes for the pulsating animation */
 @keyframes pulsate {
     0% {
-        background-color: rgba(255, 255, 255, 0.3); /* Starting point */
-        box-shadow: 0 0 15px rgba(0, 255, 0, 0.5); /* Lighter green shadow */
+        background-color: rgba(255, 255, 255, 0.758); /* Starting point */
+        box-shadow: 0 0 15px rgba(170, 172, 169, 0.999); /* Lighter green shadow */
     }
     50% {
         background-color: rgba(255, 255, 255, 0.6); /* Pulse to a brighter background */
-        box-shadow: 0 0 30px rgba(0, 255, 0, 0.9); /* Stronger green shadow */
+        box-shadow: 0 0 30px rgba(245, 243, 242, 0.9); /* Stronger green shadow */
     }
     100% {
         background-color: rgba(255, 255, 255, 0.3); /* Return to the starting color */
-        box-shadow: 0 0 15px rgba(0, 255, 0, 0.5); /* Return to the starting shadow */
+        box-shadow: 0 0 15px rgba(127, 127, 126, 0.92); /* Return to the starting shadow */
     }
 }
 
