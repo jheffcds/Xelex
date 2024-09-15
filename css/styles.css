@@ -386,7 +386,7 @@ button:hover {
 }
 
 .hero .content-info {
-    display: flex;
+    display: none;
     justify-content: space-between; /* Ensure left and right containers are side by side */
     width: 100%;
     height: auto;
@@ -559,3 +559,87 @@ button:hover {
         margin-bottom: 20px;
     }
 }
+
+/* Basic slider container */
+.content-info-slider {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Hide radio buttons */
+input[type="radio"] {
+    display: none;
+}
+
+/* Slider wrapper that contains all slides */
+.slider-wrapper {
+    display: flex;
+    width: 95%; /* Adjust based on the number of slides (6 slides => 600%) */
+    transition: transform 0.5s ease;
+}
+
+/* Each slide should take 100% of the viewport width */
+.blur-container {
+    flex: 1 0 97%; /* Make each slide full width */
+}
+
+/* Slide navigation */
+.navigation {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10%;
+}
+
+.navigation label {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.navigation label:hover {
+    background-color: #333;
+}
+
+/* Slider positioning based on the radio button checked */
+input#slide1:checked ~ .slider-wrapper {
+    transform: translateX(0%);
+}
+
+input#slide2:checked ~ .slider-wrapper {
+    transform: translateX(-100%);
+}
+
+input#slide3:checked ~ .slider-wrapper {
+    transform: translateX(-200%);
+}
+
+input#slide4:checked ~ .slider-wrapper {
+    transform: translateX(-300%);
+}
+
+input#slide5:checked ~ .slider-wrapper {
+    transform: translateX(-400%);
+}
+
+input#slide6:checked ~ .slider-wrapper {
+    transform: translateX(-500%);
+}
+
+/* Active dot */
+input#slide1:checked ~ .navigation label[for="slide1"],
+input#slide2:checked ~ .navigation label[for="slide2"],
+input#slide3:checked ~ .navigation label[for="slide3"],
+input#slide4:checked ~ .navigation label[for="slide4"],
+input#slide5:checked ~ .navigation label[for="slide5"],
+input#slide6:checked ~ .navigation label[for="slide6"] {
+    background-color: #333;
+}
+
