@@ -16,7 +16,7 @@ html, body {
     background-color: transparent;
 }
 h1 {
-    font-size: 4rem;
+    font-size: 8rem;
     font-weight: 900;
     color: black;
     margin-bottom: 20px;
@@ -24,9 +24,9 @@ h1 {
 
 /* Subheading styling */
 h2 {
-    font-size: 1.5rem;
+    font-size: 4rem;
     font-weight: 300;
-    color: black;
+    color: rgba(0, 0, 0, 0.734);
     margin-bottom: 20px;
 }
 
@@ -455,6 +455,20 @@ button:hover {
         box-shadow: 0 0 15px rgba(127, 127, 126, 0.92); /* Return to the starting shadow */
     }
 }
+@keyframes pulsate2 {
+    0% {
+        background-color: rgba(255, 255, 255, 0.758); /* Starting point */
+        box-shadow: 0 0 15px rgba(236, 236, 236, 0.999); /* Lighter green shadow */
+    }
+    50% {
+        background-color: rgba(255, 255, 255, 0.926); /* Pulse to a brighter background */
+        box-shadow: 0 0 30px rgba(245, 243, 242, 0.9); /* Stronger green shadow */
+    }
+    100% {
+        background-color: rgba(255, 255, 255, 0.804); /* Return to the starting color */
+        box-shadow: 0 0 15px rgba(216, 216, 215, 0.92); /* Return to the starting shadow */
+    }
+}
 
 /* Adjust the container-left and container-right within the blur-container */
 .blur-container .container-left,
@@ -505,7 +519,7 @@ button:hover {
     text-align: center;
 }
 .insights-content:hover {
-    animation: pulsate 1.5s infinite;
+    animation: pulsate2 1.5s infinite;
     background-color: rgba(255, 255, 255, 0.3); /* Brightens background on hover */
     box-shadow: 0 0 20px rgba(0, 255, 0, 0.7); /* Glow effect */
     backdrop-filter: blur(15px); /* Stronger blur on hover */
