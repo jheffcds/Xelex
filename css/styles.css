@@ -314,6 +314,7 @@ body {
     position: relative;
     padding: 100px 5px;
 }
+
 .autoShow{
     animation: autoShowAnimation both;
     animation-timeline: view(70% 5%);
@@ -388,7 +389,7 @@ button:hover {
     display: flex;
     justify-content: space-between; /* Ensure left and right containers are side by side */
     width: 100%;
-    height: 400px;
+    height: auto;
     align-items: center;
     flex-wrap: wrap;
 }
@@ -476,4 +477,85 @@ button:hover {
     height: auto;
     object-fit: contain;
     display: block;
+}
+.hero .insights {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    backdrop-filter: blur(10px); /* Adds blur effect */
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent background */
+    border-radius: 15px; /* Rounded corners */
+}
+
+/* Individual insight content box */
+.insights .insights-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: calc(33.33% - 20px); /* 3 elements per row with space between */
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent background */
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
+    text-align: center;
+}
+.insights-content:hover {
+    animation: pulsate 1.5s infinite;
+    background-color: rgba(255, 255, 255, 0.3); /* Brightens background on hover */
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.7); /* Glow effect */
+    backdrop-filter: blur(15px); /* Stronger blur on hover */
+}
+.insights-info {
+    font-size: 0.9rem;
+    color: #666; /* Muted text color */
+    margin-bottom: 10px;
+}
+
+.insights-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.insights-paragraph {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+/* Button styling */
+.insight-btn button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.insight-btn button:hover {
+    background-color: #00ff00; /* Neon green on hover */
+    color: black;
+}
+
+/* Responsive behavior - center the fourth item on a new row */
+.insights-content:nth-child(4) {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Mobile responsiveness - Stack all elements vertically */
+@media (max-width: 768px) {
+    .insights-content {
+        width: 100%; /* Stack each element in one row */
+        margin-bottom: 20px;
+    }
 }
