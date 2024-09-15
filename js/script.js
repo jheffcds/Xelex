@@ -19,3 +19,23 @@ menu.querySelectorAll(".dropdown > i").forEach((arrow) => {
         this.closest(".dropdown").classList.toggle("active")
     });
 });
+document.addEventListener("DOMContentLoaded", function() {
+    const switcherButton = document.getElementById("switcher");
+    const contentInfoSlider = document.querySelector(".content-info-slider");
+    const contentInfo = document.querySelector(".hero .content-info");
+
+    // Initial states
+    contentInfo.style.display = "none"; // hide content-info initially
+    contentInfoSlider.style.display = "block"; // show content-info-slider initially
+
+    switcherButton.addEventListener("click", function() {
+        // Toggle the display of the two sections
+        if (contentInfo.style.display === "none") {
+            contentInfo.style.display = "flex"; // show content-info
+            contentInfoSlider.style.display = "none"; // hide content-info-slider
+        } else {
+            contentInfo.style.display = "none"; // hide content-info
+            contentInfoSlider.style.display = "block"; // show content-info-slider
+        }
+    });
+});
