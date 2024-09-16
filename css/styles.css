@@ -539,7 +539,7 @@ button:hover {
 .insights-paragraph {
     font-size: 1rem;
     line-height: 1.4;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 /* Button styling */
@@ -659,3 +659,7 @@ input#slide6:checked ~ .navigation label[for="slide6"] {
 }
 
 
+.hero .tax-intro{
+    padding: 5% 10%;
+
+}
