@@ -115,7 +115,7 @@ a{ text-decoration: none;}
     top: 100%;
     left: 0;
     width: 330px;
-    padding: 15px 0;
+    padding: 25px 0;
     background: rgba(228, 226, 226, 0.721);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -128,6 +128,32 @@ a{ text-decoration: none;}
     visibility: hidden;
     opacity: 0;
 }
+/* Style for the dynamically added search input field */
+.sub-menu-search {
+    position: absolute;
+    top: 101%;
+    height: auto;
+    left: 0;
+    width: 100%;
+    padding: 15px 10px;
+    background: rgba(228, 226, 226, 0.721);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(154, 150, 150, 0.13);
+    z-index: 1;
+}
+
+.search-field {
+    width: 50%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    font-size: 16px;
+}
+
 
 .header .menu .sub-menu-right{
     left: 100%;
@@ -200,7 +226,7 @@ a{ text-decoration: none;}
     background-color: transparent;
     border: none;
     cursor: pointer;
-    color: hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 0%);
     font-size: 16px;
 }
 .header-right .open-menu-btn{
@@ -250,7 +276,7 @@ a{ text-decoration: none;}
         position: absolute;
         width: 80%;
         height: 2px;
-        background-color: hsl(0, 0%, 100%);
+        background-color: hsl(0, 0%, 0%);
     }
     .header .menu .close-menu-btn::before{
         transform: rotate(45deg);
@@ -334,7 +360,7 @@ a{ text-decoration: none;}
      .header-right .open-menu-btn .line{
         height: 2px;
         width: 30px;
-        background-color: hsl(0, 0%, 100%);
+        background-color: hsl(0, 0%, 0%);
         position: absolute;
      }
      .header .open-menu-btn .line-1{
@@ -386,14 +412,14 @@ a{ text-decoration: none;}
 }
 .hero .video-intro {
     width: 100%;
-    height: 500px; /* Ensures the container takes up the full height */
+    height: 600px; /* Ensures the container takes up the full height */
     position: relative; /* Important for proper scaling */
     overflow: hidden; /* Ensure the video doesn’t overflow the container */
 }
 
 .hero .video-intro video {
     width: 100%;
-    height: 500px;
+    height: 600px;
     object-fit: cover; /* Ensures the video covers the entire container without distortion */
     position: absolute; /* Ensures the video fills the entire container */
     top: 0;
