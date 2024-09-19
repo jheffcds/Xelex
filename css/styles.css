@@ -10,9 +10,13 @@ html, body {
     margin: 0;
     padding: 0;
 }
+.header .container .logo img{
+    width: 150px;
+    height: 25px;
+}
 .container {
     padding-left: 20px;
-    padding-right: 20px;
+    padding-right: 15px;
     background-color: transparent;
 }
 h1 {
@@ -31,7 +35,7 @@ h2 {
 }
 
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto" ,"Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
     background: linear-gradient(180deg, #a09d9d 0%, #fdfdfd 30%, #88b6f3fb 70%, #f0ce27 100%);
@@ -54,14 +58,18 @@ body {
 .header .container {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content:space-between;
 }
 .header .logo img {
-    vertical-align: middle;
-    width: 10vh;
-    height: 10vh;
+    display: block;
+    margin: -34px auto 0; /* Position flags below the logo */
+    width: 60px; /* Adjust the width */
+    height: auto; /* Maintain aspect ratio */
+
 
 }
+
+a{ text-decoration: none;}
 .header .menu .head {
     display: none;
 }
@@ -106,9 +114,9 @@ body {
     position: absolute;
     top: 100%;
     left: 0;
-    width: 230px;
+    width: 330px;
     padding: 15px 0;
-    background: rgba(154, 150, 150, 0.3);
+    background: rgba(228, 226, 226, 0.721);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(18px);
@@ -120,6 +128,7 @@ body {
     visibility: hidden;
     opacity: 0;
 }
+
 .header .menu .sub-menu-right{
     left: 100%;
     top: 0;
@@ -152,7 +161,37 @@ body {
 
 }
 .header-right{
+
+    /* padding: 19px; */
     display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    align-content: space-between;
+}
+.header-right button:hover {
+    background-color: #ffffff53;
+    border: solid 1px rgba(88, 83, 83, 0.398);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+.header .menu .sub-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 330px;
+    padding: 15px 0;
+    background: rgba(228, 226, 226, 0.721);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(154, 150, 150, 0.13);
+    z-index: 1;
+    transform-origin: top;
+    transform: scaleY(0);
+    visibility: hidden;
+    opacity: 0;
 }
 .header-right > *{
     margin-left: 25px;
@@ -486,6 +525,20 @@ button:hover {
 .blur-container .container-left,
 .blur-container .container-right {
     width: 48%; /* Adjusts to fit inside the blur-container */
+}
+
+/* Styling for the professional accomplishments and memberships section */
+.container-left h4 {
+    font-size: px;
+    color: #555; /* Light gray for more subtle tone */
+}
+
+/* Improve paragraph spacing */
+.container-left p {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
 }
 
 /* Ensure the contents are centered inside the container-left */
