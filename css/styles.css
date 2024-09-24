@@ -195,6 +195,11 @@ a{ text-decoration: none;}
     right: 24px;
 
 }
+.header .menu .sub-menu-right{
+    background-color: #00ff00;
+    left: 100%;
+    top: 0;
+}
 .header-right{
 
     /* padding: 19px; */
@@ -645,7 +650,9 @@ button:hover {
     line-height: 1.4;
     margin-bottom: 25px;
 }
-
+.insights .insights-paragraph-list{
+    padding: 50px;
+}
 /* Button styling */
 .insight-btn button {
     padding: 10px 20px;
