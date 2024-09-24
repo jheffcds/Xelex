@@ -642,11 +642,6 @@ button:hover {
     margin-bottom: 25px;
     text-align: justify;
 }
-.insights-paragraph:hover {
-    font-size: 1.4rem;
-    line-height: 1.4;
-    margin-bottom: 25px;
-}
 .insights .insights-paragraph-list{
     padding: 50px;
 }
