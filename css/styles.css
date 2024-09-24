@@ -106,7 +106,7 @@ a{ text-decoration: none;}
 }
 
 .header .menu a:hover {
-    font-size: 25px;
+    font-size: 1.25rem;
     color: #222121c7;
 }
 .header .menu > ul > li > a {
