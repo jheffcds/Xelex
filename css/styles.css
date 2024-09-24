@@ -33,6 +33,10 @@ h2 {
     color: rgba(0, 0, 0, 0.734);
     margin-bottom: 20px;
 }
+h3{
+    font-size: 2em;
+    padding: 50px;
+}
 
 body {
     font-family: "Roboto" ,"Poppins", sans-serif;
@@ -627,7 +631,7 @@ button:hover {
     transition: background-color 0.4s ease, box-shadow 0.4s ease;
     text-align: center;
 }
-.insights-content:hover {
+.insights .insights-content:hover {
     animation: pulsate2 1.5s infinite;
     background-color: rgba(255, 255, 255, 0.3); /* Brightens background on hover */
     box-shadow: 0 0 20px rgba(0, 255, 0, 0.7); /* Glow effect */
@@ -646,13 +650,21 @@ button:hover {
 }
 
 .insights-paragraph {
+    padding: 20px;
     font-size: 1rem;
+    line-height: 1.4;
+    margin-bottom: 25px;
+    text-align: justify;
+}
+.insights-paragraph:hover {
+    font-size: 1.4rem;
     line-height: 1.4;
     margin-bottom: 25px;
 }
 .insights .insights-paragraph-list{
     padding: 50px;
 }
+
 /* Button styling */
 .insight-btn button {
     padding: 10px 20px;
