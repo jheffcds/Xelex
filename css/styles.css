@@ -565,6 +565,11 @@ button:hover {
 /* Styling for the professional accomplishments and memberships section */
 .container-left h4 {
     color: #555; /* Light gray for more subtle tone */
+    font-size: 14px;
+}
+.container-left h4:hover {
+    color: #555; /* Light gray for more subtle tone */
+    font-size: 18px;
 }
 
 /* Improve paragraph spacing */
