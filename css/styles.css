@@ -134,7 +134,7 @@ a{ text-decoration: none;}
     padding: 25px 0;
     background: rgba(228, 226, 226, 0.721);
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 30px rgba(50, 48, 48, 0.346);
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(8px);
     border: 1px solid rgba(154, 150, 150, 0.13);
@@ -189,7 +189,7 @@ a{ text-decoration: none;}
 }
 .header .menu .sub-menu span{
     font-size: 20px;
-    background-image: linear-gradient(hsl(0,0%,100%), hsl(0,0%,100%));
+    background-image: linear-gradient(hsl(0, 4%, 14%), hsl(0,0%,100%));
     background-size: 0 1px;
     background-repeat: no-repeat;
     background-position: 0 100%;
