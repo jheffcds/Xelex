@@ -476,13 +476,16 @@ button:hover {
     flex-direction: column;
     justify-content: center; /* Vertically centers the items */
     align-items: center; /* Horizontally centers the items */
-    width: 50%;
+    width: 85%;
     padding: 20px;
     text-align: center; /* Centers the text content */
 }
-
+.inner-container{
+    padding-left: 10%;
+    padding-right: 10%;
+}
 .hero .container-right {
-    width: 50%;
+    max-width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -491,7 +494,7 @@ button:hover {
 }
 
 .hero .container-right img {
-    max-width: 100%;
+    max-width: 50%;
     height: auto;
     object-fit: contain; /* Ensures the image fits within the container without distortion */
     display: block;
@@ -510,8 +513,23 @@ button:hover {
     overflow: hidden;
     transition: background-color 0.4s ease, box-shadow 0.4s ease;
 }
+.blur-container-1 {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    margin: 20px;
+    backdrop-filter: blur(20px); /* Adds the blur effect */
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    background-color: rgba(255, 255, 255, 0.1); /* Light translucent background */
+    overflow: hidden;
+}
+ol{
+    padding-left: 30px;
+}
 .blur-container2 {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     padding: 30px;
@@ -1094,3 +1112,8 @@ footer .flag:hover {
     }
 }
 
+.hero .blur-container2 p{
+    font-size: 1.2rem;
+    text-align: justify;
+    padding: 30px;
+}
