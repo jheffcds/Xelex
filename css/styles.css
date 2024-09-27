@@ -520,8 +520,8 @@ button:hover {
     margin: 20px;
     backdrop-filter: blur(20px); /* Adds the blur effect */
     border-radius: 20px; /* Rounded corners */
-    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
-    background-color: rgba(255, 255, 255, 0.1); /* Light translucent background */
+    box-shadow: 0px 4px 30px rgba(44, 44, 44, 0.751); /* Adds a subtle shadow */
+    background-color: rgba(255, 255, 255, 0.529); /* Light translucent background */
     overflow: hidden;
 }
 ol{
@@ -640,7 +640,7 @@ ol{
     backdrop-filter: blur(5px);
     padding: 20px;
     border-radius: 15px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.609); /* Subtle shadow */
     transition: background-color 0.4s ease, box-shadow 0.4s ease;
     text-align: center;
 }
@@ -758,6 +758,7 @@ ol{
         flex-basis: 90%;
     }
     .hero h2{
+        text-align: center;
         font-size: 2rem;
     }
     .insights .insights-content {
