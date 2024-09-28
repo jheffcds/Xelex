@@ -1,7 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 *{
-    font-family: math;
+    font-family: Graphik,Arial,Helvetica,sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -29,7 +28,7 @@ h1 {
 
 /* Subheading styling */
 h2 {
-    font-family: math;
+    font-family: sans-serif;
     font-size: 4rem;
     font-weight: 300;
     color: rgba(0, 0, 0, 0.734);
@@ -37,16 +36,16 @@ h2 {
 }
 h3{
     text-align: justify;
-    font-family: math;
+    font-family: sans-serif;
     font-size: 2em;
     padding: 50px;
 }
 h4{
-    font-family: math;
+    font-family: sans-serif;
 }
 
 body {
-    font-family: math;
+    font-family: sans-serif;
     font-weight: 400;
     font-style: normal;
     background: linear-gradient(180deg, #a09d9d 0%, #fdfdfd 30%, #88b6f3fb 70%, #f0ce27 100%);
@@ -132,7 +131,7 @@ a{ text-decoration: none;}
     left: 0;
     width: 400px;
     padding: 25px 0;
-    background: rgba(228, 226, 226, 0.721);
+    background: rgba(228, 226, 226, 0.912);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(50, 48, 48, 0.346);
     backdrop-filter: blur(18px);
@@ -493,6 +492,52 @@ button:hover {
     overflow: hidden; /* Ensures no overflow */
 }
 
+/* Keyframes for pushing the old image to the right */
+@keyframes stack-out {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+/* Keyframes for bringing the new image from the left to the center */
+@keyframes stack-in {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Ensure the image-intro section takes up full width and height */
+.hero .image-intro {
+    width: 100%;
+    height: auto;
+}
+
+.hero .image-intro img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+/* Hide the current image by pushing it to the right */
+.hero .image-intro img.stack-out {
+    animation-name: stack-out;
+}
+
+/* Bring the next image from the left */
+.hero .image-intro img.stack-in {
+    animation-name: stack-in;
+}
+
+
 .hero .container-right img {
     max-width: 50%;
     height: auto;
@@ -508,7 +553,7 @@ button:hover {
     margin: 20px;
     backdrop-filter: blur(20px); /* Adds the blur effect */
     border-radius: 20px; /* Rounded corners */
-    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.609); /* Adds a subtle shadow */
     background-color: rgba(255, 255, 255, 0.1); /* Light translucent background */
     overflow: hidden;
     transition: background-color 0.4s ease, box-shadow 0.4s ease;
@@ -696,6 +741,65 @@ ol, ul{
     margin-left: auto;
     margin-right: auto;
 }
+/* Dropdown Button */
+.language-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #dcdcdc61;
+    color: #333;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.dropbtn img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.language-dropdown:hover .dropbtn {
+    background-color: #ddd;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #dcdcdced;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-content a img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+/* Show dropdown */
+.language-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
 
 /* Mobile responsiveness - Stack all elements vertically */
 @media (max-width: 768px) {
@@ -1094,8 +1198,13 @@ footer .flag:hover {
      .header .open-menu-btn .line-3{
         transform: translateY(8px);
      }
-     .hero .video-intro video {
-        top: 15px;
+     .header .container .logo p{
+        margin-top: 30px ;
+     }
+     .hero h3{
+        font-size: 1rem;
+        padding: 13px;
+        text-align: center;
      }
      .footer-container .footer-bottom {
         margin-top: 1%;
