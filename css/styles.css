@@ -14,6 +14,10 @@ html, body {
     width: 150px;
     height: 25px;
 }
+.footer-info img{
+    width: 20px;
+    height: 20px;
+}
 .container {
     padding-left: 3px;
     padding-right: 3px;
