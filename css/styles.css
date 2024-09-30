@@ -1031,6 +1031,53 @@ footer {
 .footer-info a:hover {
     color: #2a2a2aae;
 }
+.hero .blur-container-1 .insights{
+    flex-wrap: nowrap;
+}
+.hero .blur-container-1 .insights .block-top{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.hero .work-permit-type{
+    text-align: center;
+}
+.hero .work-permit-type .insights{
+    flex-direction: column;
+}
+.hero .work-permit-type .insights .insights-content{
+    width: 100%;
+}
+
+.hero .blur-container-1 .insights .insights-paragraph :first-child{
+    text-align: justify;
+}
+
+.hero .blur-container-1 .insights .insights-paragraph {
+    text-align: center;
+}
+
+.hero .blur-container-1 .insights .block-left{
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.609);
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
+    text-align: center;
+}
+.hero .blur-container-1 .insights .block-right{
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.609);
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
+    text-align: center;
+}
+
 
 .footer-bottom {
     flex-basis: 100%;
