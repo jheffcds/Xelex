@@ -1049,11 +1049,32 @@ footer {
 .insights .block-left a:visited{
     color: inherit;
 }
+.insights .block-left:hover {
+    animation: pulsate2 1.5s infinite;
+    background-color: rgba(255, 255, 255, 0.3); /* Brightens background on hover */
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.7); /* Glow effect */
+    backdrop-filter: blur(15px); /* Stronger blur on hover */
+}
+.insights .block-right:hover {
+    animation: pulsate2 1.5s infinite;
+    background-color: rgba(255, 255, 255, 0.3); /* Brightens background on hover */
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.7); /* Glow effect */
+    backdrop-filter: blur(15px); /* Stronger blur on hover */
+}
 .insights .block-right a:visited{
     color: inherit;
 }
 .insights .insights-content a:visited{
     color: inherit;
+}
+.hero .blur-container-1 .insights .block-top a:visited{
+    color: inherit;
+}
+.hero .blur-container-1 .insights .block-top:hover{
+    animation: pulsate2 1.5s infinite;
+    background-color: rgba(255, 255, 255, 0.3); /* Brightens background on hover */
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.7); /* Glow effect */
+    backdrop-filter: blur(15px); /* Stronger blur on hover */
 }
 .hero .blur-container-1 .insights .block-top .insights-title{
     display: flex;
