@@ -43,6 +43,39 @@ document.querySelectorAll('.dropdown-content a').forEach(function (languageOptio
 });
 
 document.addEventListener("DOMContentLoaded", function() {
+    let currentSlide = 1;
+    const totalSlides = 6; // Total number of slides
+    const intervalTime = 5000; // 5 seconds per slide
+    let slideInterval;
+
+    // Function to move to the next slide
+    function nextSlide() {
+        currentSlide = (currentSlide % totalSlides) + 1; // Go to the next slide, loop back to the first
+        document.getElementById('slide' + currentSlide).checked = true;
+    }
+
+    // Function to start the slide transition interval
+    function startSlideShow() {
+        slideInterval = setInterval(nextSlide, intervalTime);
+    }
+
+    // Function to stop the slide transition interval
+    function stopSlideShow() {
+        clearInterval(slideInterval);
+    }
+
+    // Automatically switch slides every 5 seconds
+    startSlideShow();
+
+    // Pause the slideshow on hover
+    const sliderWrapper = document.querySelector('.slider-wrapper');
+    sliderWrapper.addEventListener('mouseover', stopSlideShow);
+    sliderWrapper.addEventListener('mouseout', startSlideShow);
+});
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
     const switcherButton = document.getElementById("switcher");
     const contentInfoSlider = document.querySelector(".content-info-slider");
     const contentInfo = document.querySelector(".hero .content-info");
