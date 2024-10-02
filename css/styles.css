@@ -93,7 +93,10 @@ body {
 
 }
 
-a{ text-decoration: none;}
+a{ 
+    text-decoration: none;
+    color: inherit;
+}
 .header .menu .head {
     display: none;
 }
