@@ -62,7 +62,7 @@ body {
     font-family: sans-serif;
     font-weight: 400;
     font-style: normal;
-    background: linear-gradient(180deg, #a09d9d 0%, #fdfdfd 30%, #88b6f3fb 70%, #f0ce27 100%);
+    background: linear-gradient(180deg, #a09d9d 0%, #fdfdfd 30%, #88b6f3fb 70%, #fdab2fa1 100%);
     background-size: cover; /* Ensures the background covers the entire body */
     background-position: center;
     background-attachment: fixed; /* Fixes the background in place */
