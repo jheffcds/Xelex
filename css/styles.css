@@ -366,6 +366,10 @@ a{
         transform: none;
         right: 0;
      }
+     .header .container .header-right {
+        display: flex;
+        flex-wrap: nowrap;
+     }
      .header-right .open-menu-btn{
         display: inline-flex;
         align-items: center;
@@ -1326,6 +1330,42 @@ footer .flag:hover {
         text-align: center;
         font-size: 14px;
     }
+    footer {
+        padding: 0;
+    }
+    .hero .blur-container2 {
+        padding: 0;
+        margin: 0;
+    }
+    .hero .blur-container2 .container-left{
+        padding: 0;
+    }
+    .hero .blur-container2 p:nth-child(2),
+    .hero .blur-container2 p:nth-child(3),
+    .hero .blur-container2 p:nth-child(4)
+    {
+        text-align: center;
+    }
+    .hero .blur-container2 .inner-container p {
+        text-align: center;
+    }
+    .hero .blur-container-1 h4{
+        text-align: justify;
+    }
+    .hero .blur-container-1 p{
+        text-align:center;
+    }
+    .footer-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-container .footer-info p:nth-child(1),
+    .footer-container .footer-info p:nth-child(2){
+        text-align: justify;
+    }
+    .footer-container .footer-info p:nth-child(3) {
+        text-align:center;
+    }
     .footer-container .footer-info{
         flex-basis: 59%;
         font-size: 16px;
@@ -1333,6 +1373,27 @@ footer .flag:hover {
     }
     .footer-container .language-selector{
         justify-content: center;
+    }
+    .hero .ailaw .blur-container-1 {
+       padding: 5%;
+    }
+    .hero .ailaw h2 {
+        text-align: center;
+    }
+    .hero .ailaw .blur-container-1 .insights{
+        display: flex;
+        flex-direction: column;
+    }
+    .hero .ailaw .blur-container-1 .insights .insights-paragraph{
+        text-align: start;
+    }
+    .hero .ailaw .blur-container-1 .insights .block-left,
+    .hero .ailaw .blur-container-1 .insights .block-right {
+        width: 100%;
+    }
+    .hero .immigrationServices .blur-container-1 .insights{
+        display: flex;
+        flex-direction: column;
     }
 }
 
