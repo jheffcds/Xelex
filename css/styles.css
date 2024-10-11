@@ -47,6 +47,7 @@ h2 {
     font-weight: 300;
     color: rgba(0, 0, 0, 0.734);
     margin-bottom: 20px;
+    margin-top: 5%;
 }
 h3{
     text-align: justify;
@@ -1105,9 +1106,6 @@ footer {
     width: 100%;
 }
 
-.hero .blur-container-1 .insights .insights-paragraph :first-child{
-    text-align: justify;
-}
 
 .hero .blur-container-1 .insights .insights-paragraph {
     text-align: center;
@@ -1349,8 +1347,14 @@ footer .flag:hover {
     .hero .blur-container2 .inner-container p {
         text-align: center;
     }
-    .hero .blur-container-1 h4{
-        text-align: justify;
+    .header-right > * {
+        margin-left: 8px;
+    }
+    .hero .immigrationServices .blur-container-1 h4{
+        text-align: center;
+    }
+    .hero .blur-container-1{
+        margin: 0;
     }
     .hero .blur-container-1 p{
         text-align:center;
@@ -1387,13 +1391,57 @@ footer .flag:hover {
     .hero .ailaw .blur-container-1 .insights .insights-paragraph{
         text-align: start;
     }
+
     .hero .ailaw .blur-container-1 .insights .block-left,
     .hero .ailaw .blur-container-1 .insights .block-right {
         width: 100%;
     }
+    .hero .immigrationServices .blur-container-1,
+    .hero .immigrationServices .blur-container-1 .insights,
+    .hero .immigrationServices .blur-container-1 .insights .block-top,
+    .hero .immigrationServices .blur-container-1 .insights .block-top .insights-paragraph
+    {
+        padding: 10px;
+    }
     .hero .immigrationServices .blur-container-1 .insights{
         display: flex;
         flex-direction: column;
+        align-items: center;
+    }
+    .hero .immigrationServices .blur-container-1 .insights .block-top,
+    .hero .immigrationServices .blur-container-1 .insights .insights-content
+     {
+        width: 80%;
+    }
+    .hero .immigrationServices .blur-container-1 .insights .block-left,
+    .hero .immigrationServices .blur-container-1 .insights .block-right {
+        width: 100%;
+    }
+    .hero .immigrationServices .blur-container-1 .insights .insights-paragraph{
+        padding: 0;
+    }
+    .hero .internationalEmployments .blur-container-1 .insights {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        padding-bottom: 10%;
+    }
+    .hero .internationalEmployments .blur-container-1 .insights .block-left,
+    .hero .internationalEmployments .blur-container-1 .insights .block-right {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .hero {
+        padding-top: 25%;
+    }
+    .hero .indexInsights .insights {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero .indexInsights .insights .insights-content{
+        width: 80%;
     }
 }
 
