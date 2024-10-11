@@ -1105,7 +1105,9 @@ footer {
 .hero .work-permit-type .insights .insights-content{
     width: 100%;
 }
-
+.hero .slider-wrapper .blur-container .container-left h2{
+    font-size: 2rem;
+}
 
 .hero .blur-container-1 .insights .insights-paragraph {
     text-align: center;
