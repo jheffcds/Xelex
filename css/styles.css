@@ -1180,7 +1180,7 @@ footer .flag:hover {
     transform: scale(1.1);
     transition: all 0.3s ease;
 }
-@media screen and (max-width: 1024px) and (max-height: 1366px) {
+@media screen and (max-width: 1260px) and (max-height: 1366px) {
     .header{
         padding: 12px 0;
     }
